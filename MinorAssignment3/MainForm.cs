@@ -57,11 +57,6 @@ namespace MinorAssignment3
             quantityTextBox.SelectAll();
         }
 
-        private void productNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            productNameComboBox.SelectAll();
-        }
-
         private void productNameComboBox_TextChanged(object sender, EventArgs e)
         {
             quantityTextBox.Text = null;
