@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ProductDatabaseDataSet" targetNamespace="http://tempuri.org/ProductDatabaseDataSet.xsd" xmlns:mstns="http://tempuri.org/ProductDatabaseDataSet.xsd" xmlns="http://tempuri.org/ProductDatabaseDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ProductDatabaseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ProductDatabaseConnectionString (Settings)" PropertyReference="ApplicationSettings.MinorAssignment3.Properties.Settings.GlobalReference.Default.ProductDatabaseConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PRODUCTTableAdapter" GeneratorDataComponentClassName="PRODUCTTableAdapter" Name="PRODUCT" UserDataComponentName="PRODUCTTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProductDatabaseConnectionString (Settings)" DbObjectName="PRODUCT" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Product_Name, Purchase_Cost, Quantity_On_Hand FROM PRODUCT</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Product_Name" DataSetColumn="Product_Name" />
+              <Mapping SourceColumn="Purchase_Cost" DataSetColumn="Purchase_Cost" />
+              <Mapping SourceColumn="Quantity_On_Hand" DataSetColumn="Quantity_On_Hand" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ProductDatabaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ProductDatabaseDataSet" msprop:Generator_UserDSName="ProductDatabaseDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PRODUCT" msprop:Generator_TableClassName="PRODUCTDataTable" msprop:Generator_TableVarName="tablePRODUCT" msprop:Generator_RowChangedName="PRODUCTRowChanged" msprop:Generator_TablePropName="PRODUCT" msprop:Generator_RowDeletingName="PRODUCTRowDeleting" msprop:Generator_RowChangingName="PRODUCTRowChanging" msprop:Generator_RowEvHandlerName="PRODUCTRowChangeEventHandler" msprop:Generator_RowDeletedName="PRODUCTRowDeleted" msprop:Generator_RowClassName="PRODUCTRow" msprop:Generator_UserTableName="PRODUCT" msprop:Generator_RowEvArgName="PRODUCTRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Product_Name" msprop:Generator_ColumnVarNameInTable="columnProduct_Name" msprop:Generator_ColumnPropNameInRow="Product_Name" msprop:Generator_ColumnPropNameInTable="Product_NameColumn" msprop:Generator_UserColumnName="Product_Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Purchase_Cost" msprop:Generator_ColumnVarNameInTable="columnPurchase_Cost" msprop:Generator_ColumnPropNameInRow="Purchase_Cost" msprop:Generator_ColumnPropNameInTable="Purchase_CostColumn" msprop:Generator_UserColumnName="Purchase_Cost" type="xs:double" minOccurs="0" />
+              <xs:element name="Quantity_On_Hand" msprop:Generator_ColumnVarNameInTable="columnQuantity_On_Hand" msprop:Generator_ColumnPropNameInRow="Quantity_On_Hand" msprop:Generator_ColumnPropNameInTable="Quantity_On_HandColumn" msprop:Generator_UserColumnName="Quantity_On_Hand" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
